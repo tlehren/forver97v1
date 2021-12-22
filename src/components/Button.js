@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "gatsby";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowDown } from "react-icons/hi";
 import { IconContext } from "react-icons";
 
 const Button = ({ to, text }) => {
   return (
-    <IconContext.Provider value={{ style: { verticalAlign: "middle" } }}>
-      <Link className="btn" to={to}>
-        {text} <HiArrowNarrowRight />
+    <IconContext.Provider
+      value={{
+        style: { fontSize: "1.5rem" },
+      }}
+    >
+      <Link className="btn flex" to={to}>
+        {text} <HiArrowNarrowDown />
       </Link>
     </IconContext.Provider>
   );

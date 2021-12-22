@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import Video from "../components/Video";
+import "../styles/utilities.css";
 import "../styles/index.css";
 
 export default function Home() {
@@ -10,9 +11,6 @@ export default function Home() {
       {/* hero */}
       <section className="hero">
         <div className="container flex">
-          <h1>
-            Passion <br /> is <br /> Limitless
-          </h1>
           <Button to="#about" text="Learn" />
         </div>
       </section>
@@ -29,10 +27,10 @@ export default function Home() {
       <section className="contact" id="contact">
         <div className="container">
           <div className="card">
-            <form action="/success" method="post">
-              <fieldset class="formGrid">
+            <form name="contact" method="POST" data-netlify="true">
+              <fieldset>
                 <legend>Contact form</legend>
-                <div class="form-control">
+                <div className="form-control">
                   <label for="name">First Name</label>
                   <input
                     type="text"
@@ -43,7 +41,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div class="form-control">
+                <div className="form-control">
                   <label for="email">Email</label>
                   <input
                     type="email"
@@ -53,7 +51,7 @@ export default function Home() {
                     required=""
                   />
                 </div>
-                <div class="form-control full">
+                <div className="form-control">
                   <label for="message">Your Message</label>
                   <textarea
                     name="message"
@@ -64,8 +62,8 @@ export default function Home() {
                     required=""
                   ></textarea>
                 </div>
-                <button type="submit" class="btn full">
-                  Send It
+                <button type="submit" className="btn">
+                  Submit
                 </button>
               </fieldset>
             </form>
